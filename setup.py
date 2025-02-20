@@ -3,8 +3,18 @@ Created 07-01-21 by Mojtaba Heydari <mheydari@ur.rochester.edu>
 """
 
 import setuptools
-from setuptools import find_packages
+from setuptools import find_packages, setup
 import distutils.cmd
+
+# Define build-system requirements
+SETUP_REQUIRES = [
+    "setuptools>=42",
+    "wheel",
+    "cython",
+    "numpy",
+    "numba>=0.58.1",
+    "llvmlite>=0.41.0"
+]
 
 REQUIRED_PACKAGES = [
     "numpy",
@@ -40,7 +50,8 @@ class MakeReqsCommand(distutils.cmd.Command):
                 f.write(req)
                 f.write("\n")
 
-setuptools.setup(
+setup(
+    setup_requires=SETUP_REQUIRES,
     cmdclass={
         "make_reqs": MakeReqsCommand
     },
