@@ -11,6 +11,7 @@ REQUIRED_PACKAGES = [
     "cython",
     "librosa>=0.10.1",
     "numba>=0.58.1",
+    "llvmlite>=0.41.0",
     "scipy",
     "mido>=1.2.6",
     "pytest",
@@ -51,7 +52,7 @@ setuptools.setup(
     install_requires=REQUIRED_PACKAGES,
     author="Mojtaba Heydari",
     author_email="mheydari@ur.rochester.edu",
-    description="A package for Real-time and offline music beat, downbeat, tempo and meter tracking using BeatNet AI",
-    keywords="Beat tracking, Downbeat tracking, meter detection, tempo tracking, particle filtering, real-time beat, real-time tempo",
+    description="A package for Real-time and offline music beat downbeat tempo and meter tracking using BeatNet AI",
+    keywords="Beat tracking Downbeat tracking meter detection tempo tracking particle filtering real-time beat real-time tempo",
     url="https://github.com/mjhydri/BeatNet"
 )
